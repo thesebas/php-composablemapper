@@ -1,0 +1,20 @@
+{
+  "name": "thesebas/php-composablemapper",
+  "type": "library",
+  "description": "composable functions for mappers",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "thesebas",
+      "email": "thesebas@thesebas.net"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "./src/functions.php"
+    ]
+  },
+  "require": {
+    "php": "^7"
+  }
+}

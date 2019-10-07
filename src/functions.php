@@ -44,3 +44,24 @@ function ifNotNull(\Closure $param)
         return $param($val);
     };
 }
+
+function floatVal()
+{
+    return function ($v) {
+        return \floatval($v);
+    };
+}
+
+function intVal($base = 10)
+{
+    return function ($v) use ($base) {
+        return \intval($v, $base);
+    };
+}
+
+function boolVal()
+{
+    return function ($v) {
+        return (bool)$v;
+    };
+}

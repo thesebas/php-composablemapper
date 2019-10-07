@@ -14,6 +14,13 @@ function compose(...$functions)
 function takeField($fname)
 {
     return function ($r) use ($fname) {
+        if (is_array($fname)) {
+            $ret = [];
+            foreach ($fname as $k => $v) {
+                $ret[$k] = $r[$v];
+            }
+            return $ret;
+        }
         return $r[$fname];
     };
 }
